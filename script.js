@@ -17,7 +17,7 @@ const randomInteger = function (min, max) {
 document.querySelector('.check').addEventListener('click', function (){
     const guess= Number(document.querySelector('.guess').value);
     console.log(document.querySelector('.guess').value);
-    const answer = randomInteger(5, 10);
+    const answer = randomInteger(1, 20);
 
     if (answer === guess){
         console.log( document.querySelector('.message').textContent = 'Correct guess' );
@@ -30,7 +30,7 @@ document.querySelector('.check').addEventListener('click', function (){
         console.log( document.querySelector('.message').textContent = 'You have not inputed a guess')
     }
     else if (guess > 10 || guess < 5){
-        document.querySelector('.message').textContent = 'Try a number between 5 - 20';
+        document.querySelector('.message').textContent = 'Try a number between 1- 20';
     }
     else{
         document.querySelector('.message').textContent = 'Keep guessing';
